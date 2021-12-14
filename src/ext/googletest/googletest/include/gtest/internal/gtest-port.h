@@ -989,6 +989,10 @@ namespace testing {
 
 class Message;
 
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING 
+
+#pragma warning(disable : 4996)
+
 #if defined(GTEST_TUPLE_NAMESPACE_)
 // Import tuple and friends into the ::testing namespace.
 // It is part of our interface, having them in ::testing allows us to change
