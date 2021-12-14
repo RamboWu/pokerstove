@@ -1,6 +1,12 @@
 PokerStove
 ==========
 
+编译的时候，先用CMake 编译gtest，产生gtest.lib
+然后在用CMake 做 pokerstove，
+添加gtest文件为 上面 gtest产生的
+添加Boost_INCLUDE_DIR为 boost_1.75.0目录
+添加BOOST_LIBRARYDIR为 boost编译出来的lib文件
+
 [![OpenHUB Metrics](https://www.openhub.net/p/pokerstove/widgets/project_thin_badge.gif)](https://www.openhub.net/p/pokerstove)
 
 PokerStove is a highly hand optimized C++ poker hand evaluation library.  The Win32 Hold'em
