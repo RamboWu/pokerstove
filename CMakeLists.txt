@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.22)
 
 project(pokerstove)
 
@@ -7,24 +7,16 @@ project(pokerstove)
 #
 # TODO: This, ideally, should be per library requirement,
 #       but since all of them require C++11, the flag is set globally.
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
 # TODO: Remove the depricated register keywords
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-register")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-register")
 
-# Set up gtest. This must be set up before any subdirectories are
-# added which will use gtest.
-add_subdirectory(src/ext/googletest)
-find_library(gtest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
-link_directories(${GTEST_LIBS_DIR})
-add_definitions("-fPIC")
-enable_testing()
 
 #
 # set up boost
 #
-set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 find_package(Boost COMPONENTS program_options REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
