@@ -7,6 +7,9 @@
 #include "Holdem.h"
 #include "PokerEvaluation.h"
 #include "PokerEvaluationTables.h"
+#include <sstream>
+#include <string>
+#include <cmath>
 #include <algorithm>
 #include <cassert>
 #include <stdexcept>
