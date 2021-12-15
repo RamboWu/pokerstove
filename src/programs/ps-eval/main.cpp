@@ -40,7 +40,9 @@ int main(int argc, char** argv)
 
     // extract the options
     string game = vm["game"].as<string>();
+    cout << "game: " << game << endl;
     string board = vm.count("board") ? vm["board"].as<string>() : "";
+    cout << "board: " << board << endl;
     vector<string> hands = vm["hand"].as<vector<string>>();
 
     bool quiet = vm.count("quiet") > 0;

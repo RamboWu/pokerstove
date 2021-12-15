@@ -170,6 +170,13 @@ bool CardDistribution::parse(const std::string& input)
         _weights[hand] = weight;
         _handList.push_back(hand);
     }
+#ifdef DEBUG
+    cout << " HandList: ";
+    for (CardSet card_set : _handList) {
+        cout << card_set.str();
+    }
+    cout << endl;
+#endif
     return true;
 }
 
